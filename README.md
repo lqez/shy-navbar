@@ -23,7 +23,7 @@ Install
 Sample
 ------
 
-<http://shy-navbar.github.io>
+<http://lqez.github.io/shy-navbar/>
 
 
 Movite
