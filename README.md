@@ -15,7 +15,7 @@ Install
 
  - Need `jQuery`.
  - Download and include [shy-navbar.js](https://raw.github.com/lqez/shy-navbar/master/shy-navbar.js) at the end of your project or wherever you want.
- - Call `addShyness("#navbar");`.
+ - Call `$("#navbar").shy();`.
  - Change threshold and other variables to suit your taste.
  - Done.
 
