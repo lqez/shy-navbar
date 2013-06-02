@@ -1,1 +1,79 @@
-Sample page for shy-navbar
+<html>
+<head>
+    <title>Sample page for shy-navbar</title>
+    <script src="./jquery.min.js"></script>
+    <script src="./shy-navbar.js"></script>
+</head>
+<style>
+* {
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    color: #444;
+    background: #999;
+}
+hr {
+    border: 0;
+    border-bottom: 1px dashed #999;
+    margin: 20px 0;
+}
+#nav {
+    color: white;
+    height: 60px;
+    width: 100%;
+}
+#bar {
+    background: #444;
+    line-height: 60px;
+    padding: 0 20px;
+}
+#content {
+    background: #FAFAFA;
+    padding: 60px 20px;
+}
+#footer {
+    background: #111;
+    color: #999;
+    padding: 5px 20px;
+    text-align: right;
+}
+#footer a {
+    color: white;
+}
+#bar, #content, #footer {
+    max-width: 900px;
+    margin: auto;
+}
+.longlong {
+    height: 1000px;
+}
+</style>
+<body>
+    <div id="nav">
+        <div id="bar">
+            I'm a navigation bar.
+        </div>
+    </div>
+    <div id="content">
+        <h1>A sample page of shy-navbar</h1>
+        <p>This page shows how shy-navbar works.</p>
+        <hr>
+        <div class="longlong">
+            I'm very very long long content.
+        </div>
+        <div class="longlong">
+            .. still
+        </div>
+        <div class="longlong">
+            Glad to see you again.
+        </div>
+    </div>
+    <div id="footer">
+        <p>Find out more in <a href="https://github.com/lqez/shy-navbar/">Github</a></p>
+    </div>
+</body>
+<script>
+    addShyness("#nav");
+</script>
+</html>
