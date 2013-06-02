@@ -26,7 +26,7 @@ function addShyness(target)
             var height = $navbar.height();
             var scrollTop = $(this).scrollTop()
 
-            if( scrollTop < height ) {
+            if( scrollTop <= 0 ) {
                 $navbar.clearQueue().css({ top: 0, position: 'absolute' });
             } else {
                 if( scrollTop < lastScrollTop ) {
