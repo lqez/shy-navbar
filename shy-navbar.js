@@ -14,6 +14,11 @@ function addShyness(target)
         var animationDur = 150;
 
         var $navbar = $(target);
+        $navbar.css({
+                'position': 'absolute',
+                     'top': '0',
+                 'z-index': '1'
+        });
         var lastScrollTop = 0;
 
         $(window).scroll(function () { 
