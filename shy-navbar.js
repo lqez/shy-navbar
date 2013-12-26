@@ -10,6 +10,10 @@
             this.brave();
             return;
         }
+        // for re-initialization
+        if (typeof this.data('shy') == 'object') {
+            this.brave();
+        }
         // Change these variables to suit your favor.
         var settings = $.extend({
             thresholdUp: 10,
