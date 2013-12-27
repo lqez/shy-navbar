@@ -5,7 +5,7 @@ shy-navbar - Add "shyness" into your navigation bar.
 Navigation bar is a common design asset used widely in web site design. But it is - **sometimes** - not so handy,
 
  - When it just stucked at top : Scrolling up to the bar in long long page makes me crazy.
- - When it had `position:fixed` : My phone screen size is not so tall.
+ - When it had `position:fixed` : But my phone screen size is not so tall.
 
 Sounds familiar? then just add `shy-navbar` into your one.
 
@@ -18,7 +18,7 @@ Install
  - Call `$("#navbar").shy();`.
  - Change threshold and other variables to suit your taste.
  - Done.
-
+ - ...or, call `$("#navbar").brave();` to fix it on top again. :)
 
 Sample
 ------
