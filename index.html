@@ -2,53 +2,11 @@
 <head>
     <title>Sample page for shy-navbar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="shy-navbar.css">
     <script src="./jquery.min.js"></script>
     <script src="./shy-navbar.js"></script>
 </head>
 <style>
-* {
-    font-family: sans-serif;
-}
-body {
-    margin: 0;
-    color: #444;
-    background: #999;
-}
-hr {
-    border: 0;
-    border-bottom: 1px dashed #999;
-    margin: 20px 0;
-}
-#nav {
-    color: white;
-    height: 60px;
-    width: 100%;
-}
-#bar {
-    background: #444;
-    line-height: 60px;
-    padding: 0 20px;
-}
-#content {
-    background: #FAFAFA;
-    padding: 60px 20px;
-}
-#footer {
-    background: #111;
-    color: #999;
-    padding: 5px 20px;
-    text-align: right;
-}
-#footer a {
-    color: white;
-}
-#bar, #content, #footer {
-    max-width: 900px;
-    margin: auto;
-}
-.longlong {
-    height: 1000px;
-}
 </style>
 <body>
     <div id="nav">
@@ -69,6 +27,10 @@ hr {
         <div class="longlong">
             Glad to see you again.
         </div>
+        <div class="toolbox">
+            <input id="btn-brave" type="button" onclick="beBrave();" value="No!!! I'm brave!" />
+            <input id="btn-shy" type="button" onclick="beShy();" value="No... I'm shy..." />
+        </div>
     </div>
     <div id="footer">
         <p>Find out more in <a href="https://github.com/lqez/shy-navbar/">Github</a></p>
@@ -76,5 +38,19 @@ hr {
 </body>
 <script>
 $("#nav").shy();
+
+function beBrave()
+{
+    $("#btn-brave").hide();
+    $("#btn-shy").show();
+    $("#nav").brave();
+}
+
+function beShy()
+{
+    $("#btn-shy").hide();
+    $("#btn-brave").show();
+    $("#nav").shy();
+}
 </script>
 </html>

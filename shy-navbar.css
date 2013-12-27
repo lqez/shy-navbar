@@ -1,0 +1,53 @@
+* {
+    font-family: sans-serif;
+}
+body {
+    margin: 0;
+    color: #444;
+    background: #999;
+}
+hr {
+    border: 0;
+    border-bottom: 1px dashed #999;
+    margin: 20px 0;
+}
+#nav {
+    color: white;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+#bar {
+    background: #444;
+    line-height: 60px;
+    padding: 0 20px;
+}
+#content {
+    background: #FAFAFA;
+    padding: 60px 20px;
+}
+#footer {
+    background: #111;
+    color: #999;
+    padding: 5px 20px;
+    text-align: right;
+}
+#footer a {
+    color: white;
+}
+#bar, #content, #footer {
+    max-width: 900px;
+    margin: auto;
+}
+.longlong {
+    height: 1000px;
+}
+.toolbox {
+    position: fixed;
+    bottom: 80px;
+}
+
+#btn-shy {
+    display: none;
+}
