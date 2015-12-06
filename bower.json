@@ -1,0 +1,19 @@
+{
+  "name": "shy-navbar",
+  "main": "shy-navbar.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/lqez/shy-navbar",
+  "authors": [
+    "Park Hyunwoo <ez@smartstudy.co.kr>"
+  ],
+  "description": "Add \"shyness\" on your bootstrap navigation bar.",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
