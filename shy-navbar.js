@@ -17,7 +17,7 @@
         // Change these variables to suit your favor.
         var settings = $.extend({
             thresholdUp: 10,
-            thresholdDown: 50,
+            thresholdDown: 80,
             animationDelay: 250,
             animationDur: 150
         }, options);
