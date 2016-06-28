@@ -29,8 +29,10 @@
         var shy = {
             previousStyles: {
                 'position': this.css('position'),
-                     'top': this.css('top'),
-                 'z-index': this.css('z-index')
+                'top': this.css('top'),
+                'z-index': this.css('z-index'),
+                '-webkit-transform': 'translateY(0)',
+                'transform': 'translateY(0)'
             },
             handler: function () {
                 var position = $this.css('position');
