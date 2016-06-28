@@ -17,13 +17,15 @@
         // Change these variables to suit your favor.
         var settings = $.extend({
             thresholdUp: 10,
-            thresholdDown: 80,
+            thresholdDown: 50,
             animationDelay: 250,
             animationDur: 150
         }, options);
 
         var $this = this;
         var lastScrollTop = 0;
+        var durInSec = (settings.animationDur / 1000.0) + 's';
+
         var shy = {
             previousStyles: {
                 'position': this.css('position'),
@@ -35,20 +37,28 @@
                 var height = $this.height();
                 var scrollTop = $(this).scrollTop()
 
-                if( scrollTop <= 0 ) {
-                    $this.clearQueue().css({ top: 0, position: 'absolute' });
+                if( scrollTop <= height ) {
+                    $this.clearQueue()
+                        .css({
+                            '-webkit-transform': 'translateY(0)',
+                            'transform': 'translateY(0)'});
                 } else {
                     if( scrollTop < lastScrollTop ) {
-                        if( position != 'fixed' && ( scrollTop + settings.thresholdDown < lastScrollTop ) ) {
-                            $this.clearQueue()
-                                .css({ top: '-'+height+'px', position: 'fixed' })
-                                .delay(settings.animationDelay).animate({ top: 0 }, settings.animationDur);
+                        if( scrollTop + settings.thresholdDown < lastScrollTop ) {
+                            $this.clearQueue().delay(settings.animationDelay).queue(function() {
+                                $(this).css({
+                                    '-webkit-transform': 'translateY(0)',
+                                    'transform': 'translateY(0)'});
+                                 $(this).dequeue();
+                            });
                         }
                     } else if( position == 'fixed' && ( scrollTop - settings.thresholdUp > lastScrollTop ) ) {
-                        $this.clearQueue()
-                            .delay(settings.animationDelay).animate({ top: '-'+height+'px' }, settings.animationDur, function() { 
-                                $(this).clearQueue().css({ top: 0, position: 'absolute' });
-                            });
+                        $this.clearQueue().delay(settings.animationDelay).queue(function() {
+                            $(this).css({
+                                '-webkit-transform': 'translateY(-100%)',
+                                'transform': 'translateY(-100%)'});
+                             $(this).dequeue();
+                        });
                     }
                 }
                 lastScrollTop = scrollTop;
@@ -57,9 +67,11 @@
 
         this.data('shy', shy);
         this.css({
-            'position': 'absolute',
-                 'top': '0',
-             'z-index': '1'
+            'position': 'fixed',
+            'top': '0',
+            'z-index': '1',
+            '-webkit-transition': '-webkit-transform ' + durInSec,
+            'transition': 'transform ' + durInSec
         });
         $(window).on('scroll', shy.handler);
     };
