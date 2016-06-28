@@ -33,7 +33,7 @@ Updates
  - v0.1.0 : Initial release.
 
 
-Movite
+Motive
 ------
 
 Facebook mobile app provides a 'quick-accessible' sub-navigation bar contains buttons in their 'news feed' page.
