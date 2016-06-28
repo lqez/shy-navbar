@@ -26,6 +26,13 @@ Sample
 <http://lqez.github.io/shy-navbar/>
 
 
+Updates
+-------
+
+ - v0.2.0 : Replace css animations to css transitions for mobile devices.
+ - v0.1.0 : Initial release.
+
+
 Movite
 ------
 
